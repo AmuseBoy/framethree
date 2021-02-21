@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liu.framethree.dao.UserMapper" >
+
+    <!--<cache></cache>-->
+
+    <resultMap id="BaseResultMap" type="com.liu.framethree.model.User" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+        <result column="sex" property="sex" jdbcType="VARCHAR" />
+        <result column="birth" property="birth" jdbcType="DATE" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+      id, name, age, sex, birth, email, password
+    </sql>
+
+    <select id="getUser" parameterType="Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where id = #{id}
+    </select>
+
+    <select id="getUserByName" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where name = #{name}
+    </select>
+
+
+    <select id="getUserList" resultType="com.liu.framethree.model.User">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+    </select>
+
+
+
+    <insert id="addUser" parameterType="com.liu.framethree.model.User">
+        insert into user (name, age, sex, birth, email, password) values (#{name},#{age},#{sex},#{birth},#{email},#{password})
+    </insert>
+
+    <insert id="saveAndUpdate" parameterType="com.liu.framethree.model.User">
+        INSERT INTO USER (name, age, sex, birth, email, password) values (#{name},#{age},#{sex},#{birth},#{email},#{password})
+        ON DUPLICATE KEY UPDATE name= #{name}, age = #{age},sex = #{sex},birth = #{birth}, email = #{email},password = #{password};
+    </insert>
+
+</mapper>
