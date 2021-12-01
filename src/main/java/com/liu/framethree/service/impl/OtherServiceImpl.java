@@ -2,10 +2,9 @@ package com.liu.framethree.service.impl;
 
 import com.liu.framethree.config.TargetDataSource;
 import com.liu.framethree.dao.UserMapper;
-import com.liu.framethree.model.User;
+import com.liu.framethree.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

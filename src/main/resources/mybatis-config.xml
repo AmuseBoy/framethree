@@ -7,7 +7,7 @@
     </settings>
 
     <typeAliases>
-        <package name="com.liu.framethree.model"/>
+        <package name="com.liu.framethree.entity"/>
     </typeAliases>
 
     <mappers>

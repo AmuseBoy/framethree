@@ -1,4 +1,4 @@
-package com.liu.framethree.model;
+package com.liu.framethree.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

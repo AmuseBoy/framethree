@@ -1,6 +1,6 @@
 package com.liu.framethree;
 
-import com.liu.framethree.model.User;
+import com.liu.framethree.entity.User;
 import com.liu.framethree.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

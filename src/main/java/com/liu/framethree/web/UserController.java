@@ -1,16 +1,13 @@
 package com.liu.framethree.web;
 
-import com.liu.framethree.model.User;
+import com.liu.framethree.entity.User;
 import com.liu.framethree.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author 刘培振

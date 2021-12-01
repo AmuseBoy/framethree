@@ -4,7 +4,7 @@
 
     <!--<cache></cache>-->
 
-    <resultMap id="BaseResultMap" type="com.liu.framethree.model.User" >
+    <resultMap id="BaseResultMap" type="com.liu.framethree.entity.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="age" property="age" jdbcType="INTEGER" />
@@ -33,7 +33,7 @@
     </select>
 
 
-    <select id="getUserList" resultType="com.liu.framethree.model.User">
+    <select id="getUserList" resultType="com.liu.framethree.entity.User">
         select
         <include refid="Base_Column_List"/>
         from user
@@ -41,11 +41,11 @@
 
 
 
-    <insert id="addUser" parameterType="com.liu.framethree.model.User">
+    <insert id="addUser" parameterType="com.liu.framethree.entity.User">
         insert into user (name, age, sex, birth, email, password) values (#{name},#{age},#{sex},#{birth},#{email},#{password})
     </insert>
 
-    <insert id="saveAndUpdate" parameterType="com.liu.framethree.model.User">
+    <insert id="saveAndUpdate" parameterType="com.liu.framethree.entity.User">
         INSERT INTO USER (name, age, sex, birth, email, password) values (#{name},#{age},#{sex},#{birth},#{email},#{password})
         ON DUPLICATE KEY UPDATE name= #{name}, age = #{age},sex = #{sex},birth = #{birth}, email = #{email},password = #{password};
     </insert>

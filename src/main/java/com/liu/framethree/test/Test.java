@@ -1,4 +1,6 @@
-package com.liu.framethree.config;
+package com.liu.framethree.test;
+
+import com.liu.framethree.config.DBContextHolder;
 
 /**
  * @ClassName Test
@@ -15,4 +17,7 @@ public class Test {
         System.out.println(DBContextHolder.getDataSource());
         System.out.println(DBContextHolder.getDataSource());
     }
+
+
+
 }

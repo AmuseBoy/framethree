@@ -1,6 +1,6 @@
 package com.liu.framethree.service;
 
-import com.liu.framethree.model.User;
+import com.liu.framethree.entity.User;
 
 import java.util.List;
 

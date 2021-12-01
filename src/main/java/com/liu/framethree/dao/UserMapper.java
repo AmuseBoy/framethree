@@ -1,7 +1,6 @@
 package com.liu.framethree.dao;
 
-import com.liu.framethree.config.TargetDataSource;
-import com.liu.framethree.model.User;
+import com.liu.framethree.entity.User;
 
 import java.util.List;
 
