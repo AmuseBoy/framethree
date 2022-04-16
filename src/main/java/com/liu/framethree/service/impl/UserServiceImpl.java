@@ -21,10 +21,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(value = "twoTaxManager")
-    @TargetDataSource("one")
+    //@TargetDataSource("two")
     public User getUser(Integer id) {
-        userMapper.getUser(id);
-        otherService.getUserList();
+//        userMapper.getUser(id);
+//        otherService.getUserList();
         return userMapper.getUser(id);
     }
 
