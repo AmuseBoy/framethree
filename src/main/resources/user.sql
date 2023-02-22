@@ -1,0 +1,1 @@
+ALTER TABLE user add COLUMN job VARCHAR(30);

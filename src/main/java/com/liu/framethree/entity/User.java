@@ -36,6 +36,8 @@ public class User implements Serializable {
 
     private String password;
 
+    private String job;
+
     public Integer getId() {
         return id;
     }
@@ -92,6 +94,13 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
 
     @Override
     public String toString() {
